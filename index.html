@@ -46,8 +46,12 @@ nav ul a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2
 nav ul a:hover{color:var(--lovely-purple)}
 nav ul a:hover::after{width:100%}
 .lang-switcher{display:flex;gap:6px}
-.lang-btn{padding:5px 12px;border:1.5px solid var(--ghost-purple);background:transparent;border-radius:20px;font-size:.8rem;font-weight:600;cursor:pointer;color:var(--dark-mid);transition:all .3s}
+.lang-btn{position:relative;overflow:hidden;padding:5px 12px;border:1.5px solid var(--ghost-purple);background:transparent;border-radius:20px;font-size:.8rem;font-weight:600;cursor:pointer;color:var(--dark-mid);transition:all .3s}
 .lang-btn.active,.lang-btn:hover{background:var(--lovely-purple);border-color:var(--lovely-purple);color:white}
+.lang-code{display:inline-block;transition:opacity .25s ease,transform .25s ease}
+.lang-btn:hover .lang-code{opacity:0;transform:scale(.5)}
+.lang-btn::after{content:attr(data-flag);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.15rem;opacity:0;transform:scale(.5);transition:opacity .25s ease,transform .25s ease;pointer-events:none}
+.lang-btn:hover::after{opacity:1;transform:scale(1)}
 .nav-cta{padding:9px 22px;background:linear-gradient(135deg,var(--mid-purple),var(--lovely-purple));color:white!important;border-radius:25px;font-weight:600!important;box-shadow:0 4px 15px var(--shadow-purple);transition:transform .3s,box-shadow .3s!important}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--shadow-purple)}
 .nav-cta::after{display:none!important}
@@ -265,11 +269,11 @@ footer{background:var(--dark);padding:60px 5% 30px;border-top:1px solid rgba(255
     <li><a href="#contact" data-i18n="nav_contact" class="nav-cta">İletişim</a></li>
   </ul>
   <div class="lang-switcher">
-    <button class="lang-btn active" onclick="setLang('tr')">TR</button>
-    <button class="lang-btn" onclick="setLang('en')">EN</button>
-    <button class="lang-btn" onclick="setLang('pl')">PL</button>
-    <button class="lang-btn" onclick="setLang('de')">DE</button>
-    <button class="lang-btn" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn active" data-flag="🇹🇷" onclick="setLang('tr')"><span class="lang-code">TR</span></button>
+    <button class="lang-btn" data-flag="🇬🇧" onclick="setLang('en')"><span class="lang-code">EN</span></button>
+    <button class="lang-btn" data-flag="🇵🇱" onclick="setLang('pl')"><span class="lang-code">PL</span></button>
+    <button class="lang-btn" data-flag="🇩🇪" onclick="setLang('de')"><span class="lang-code">DE</span></button>
+    <button class="lang-btn" data-flag="🇫🇷" onclick="setLang('fr')"><span class="lang-code">FR</span></button>
   </div>
   <div class="hamburger" onclick="toggleMobile()">
     <span></span><span></span><span></span>
@@ -284,11 +288,11 @@ footer{background:var(--dark);padding:60px 5% 30px;border-top:1px solid rgba(255
   <a href="#process" onclick="toggleMobile()" data-i18n="nav_process">Süreç</a>
   <a href="#contact" onclick="toggleMobile()" data-i18n="nav_contact">İletişim</a>
   <div class="lang-switcher" style="margin-top:20px">
-    <button class="lang-btn active" onclick="setLang('tr')">TR</button>
-    <button class="lang-btn" onclick="setLang('en')">EN</button>
-    <button class="lang-btn" onclick="setLang('pl')">PL</button>
-    <button class="lang-btn" onclick="setLang('de')">DE</button>
-    <button class="lang-btn" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn active" data-flag="🇹🇷" onclick="setLang('tr')"><span class="lang-code">TR</span></button>
+    <button class="lang-btn" data-flag="🇬🇧" onclick="setLang('en')"><span class="lang-code">EN</span></button>
+    <button class="lang-btn" data-flag="🇵🇱" onclick="setLang('pl')"><span class="lang-code">PL</span></button>
+    <button class="lang-btn" data-flag="🇩🇪" onclick="setLang('de')"><span class="lang-code">DE</span></button>
+    <button class="lang-btn" data-flag="🇫🇷" onclick="setLang('fr')"><span class="lang-code">FR</span></button>
   </div>
 </div>
 
