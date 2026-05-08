@@ -1,0 +1,12 @@
+# Python
+generate_logo.py
+__pycache__/
+*.pyc
+*.pyo
+
+# Design sources
+logo-philosophy.md
+
+# OS
+.DS_Store
+Thumbs.db
