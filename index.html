@@ -268,6 +268,8 @@ footer{background:var(--dark);padding:60px 5% 30px;border-top:1px solid rgba(255
     <button class="lang-btn active" onclick="setLang('tr')">TR</button>
     <button class="lang-btn" onclick="setLang('en')">EN</button>
     <button class="lang-btn" onclick="setLang('pl')">PL</button>
+    <button class="lang-btn" onclick="setLang('de')">DE</button>
+    <button class="lang-btn" onclick="setLang('fr')">FR</button>
   </div>
   <div class="hamburger" onclick="toggleMobile()">
     <span></span><span></span><span></span>
@@ -285,6 +287,8 @@ footer{background:var(--dark);padding:60px 5% 30px;border-top:1px solid rgba(255
     <button class="lang-btn active" onclick="setLang('tr')">TR</button>
     <button class="lang-btn" onclick="setLang('en')">EN</button>
     <button class="lang-btn" onclick="setLang('pl')">PL</button>
+    <button class="lang-btn" onclick="setLang('de')">DE</button>
+    <button class="lang-btn" onclick="setLang('fr')">FR</button>
   </div>
 </div>
 
@@ -747,6 +751,92 @@ const T = {
     footer_company:'Company', footer_about:'About Us', footer_coverage:'Coverage', footer_process:'How We Work', footer_contact:'Contact',
     footer_contact_title:'Contact', footer_pl:'Poland, Europe', footer_rights:'All rights reserved.'
   },
+  de: {
+    nav_services:'Leistungen', nav_why:'Warum Wir', nav_coverage:'Abdeckung', nav_contact:'Kontakt', nav_process:'Ablauf',
+    hero_badge:'🇪🇺 Transport durch ganz Europa',
+    hero_h1a:'Ihr zuverlässiger', hero_h1b:'Logistikpartner in Europa',
+    hero_sub:'Park Transport mit Sitz in Polen bietet europaweiten Straßengüterverkehr, Lagerung und Logistikdienstleistungen an.',
+    hero_cta1:'Angebot einholen', hero_cta2:'Unsere Leistungen',
+    stat1:'Zufriedene Kunden', stat2:'Europäische Länder', stat3:'Jahre Erfahrung', stat4:'Pünktliche Lieferungen',
+    services_label:'Unsere Leistungen', services_h2a:'An Ihrer Seite', services_h2b:'bei jedem Schritt',
+    services_desc:'Wir bieten zuverlässige Logistiklösungen durch unser umfangreiches Netzwerk von Polen bis in jeden Winkel Europas.',
+    s1_title:'Straßengüterverkehr', s1_desc:'Wir bieten FTL- und LTL-Transport in ganz Europa mit unserer modernen LKW-Flotte.',
+    s1_f1:'FTL & LTL Transport', s1_f2:'Kühlkettenlogistik', s1_f3:'Gefahrgut (ADR)', s1_f4:'Live GPS-Tracking',
+    s2_title:'Lagerung', s2_desc:'Wir lagern Ihre Waren sicher in unseren modernen Lagerhäusern in Polen.',
+    s2_f1:'24/7 Sicherheitssystem', s2_f2:'Klimatisierte Lager', s2_f3:'Lagerverwaltung (WMS)', s2_f4:'Cross-Docking',
+    s3_title:'Transportunterstützung', s3_desc:'Zollabfertigung, Versicherung, Dokumentenverwaltung und Logistikberatung.',
+    s3_f1:'Zollberatung', s3_f2:'Frachtversicherung', s3_f3:'CMR-Dokumentenverwaltung', s3_f4:'24/7 Kundensupport',
+    learn_more:'Mehr erfahren →',
+    why_label:'Warum Park Transport', why_h2a:'Vertrauen, Schnelligkeit und', why_h2b:'Transparenz',
+    why_desc:'Als vertrauenswürdiger Logistikpartner europaweit tätiger Unternehmen setzen wir bei jeder Sendung höchste Standards.',
+    feat1_title:'Zertifiziert & Lizenziert', feat1_desc:'Wir verfügen über alle Lizenzen gemäß europäischen Transportstandards.',
+    feat2_title:'Live GPS-Tracking', feat2_desc:'Verfolgen Sie Ihre Waren in Echtzeit, wo immer sie sich befinden.',
+    feat3_title:'Mehrsprachiger Support', feat3_desc:'Unser Team spricht TR, EN, PL, DE und FR — immer für Sie da.',
+    feat4_title:'Wettbewerbsfähige Preise', feat4_desc:'Die wettbewerbsfähigsten Preise in Europa ohne Qualitätskompromisse.',
+    coverage_label:'Abdeckungsgebiet', cov_h2a:'Wir erreichen', cov_h2b:'ganz Europa',
+    cov_desc:'Regelmäßige Sendungen in 30+ Länder von West- bis Osteuropa, von Nord bis Süd.',
+    process_label:'Wie wir arbeiten', process_h2:'Einfacher und <span>transparenter Ablauf</span>', process_desc:'Transport in 4 Schritten',
+    step1_title:'Angebot einholen', step1_desc:'Formular ausfüllen, anrufen oder per Telegram schreiben. Angebot in 1 Stunde.',
+    step2_title:'Vertrag', step2_desc:'Nach Einigung erstellen wir digitalen Vertrag und CMR-Dokumente.',
+    step3_title:'Verladung & Tracking', step3_desc:'Ihre Waren werden abgeholt und ein Live-GPS-Link wird Ihnen übermittelt.',
+    step4_title:'Lieferung', step4_desc:'Pünktliche, schadensfreie Lieferung. Unterschrift und Rechnung digital.',
+    contact_label:'Kontakt', contact_h2a:'Jetzt', contact_h2b:'Angebot einholen',
+    contact_desc:'Kontaktieren Sie uns für den Transport zu jedem Ort in Europa. Mehrsprachiges Team 24/7 erreichbar.',
+    phone_label:'Telefon & WhatsApp', email_label:'E-Mail', location_label:'Adresse',
+    form_title:'Kostenloses Angebot anfordern', form_name:'Vor- und Nachname *', form_company:'Firma', form_phone:'Telefon *',
+    form_email:'E-Mail', form_service:'Leistungsart *', form_select:'Auswählen...',
+    opt_ftl:'Komplettladung (FTL)', opt_ltl:'Teilladung (LTL)', opt_storage:'Lagerung', opt_customs:'Zoll & Support', opt_other:'Sonstiges',
+    form_from:'Ladeort *', form_to:'Lieferort *', form_msg:'Zusätzliche Informationen', form_btn:'Angebot anfordern',
+    form_note:'* Ihre Nachricht wird direkt an Telegram gesendet. Antwort innerhalb von 1 Stunde.',
+    success_title:'Nachricht gesendet!', success_desc:'Unser Support-Team wird sich in Kürze bei Ihnen melden.',
+    footer_desc:'Ihr zuverlässiger Logistikpartner mit Sitz in Polen, der jeden Winkel Europas erreicht.',
+    footer_services:'Leistungen', footer_ftl:'Komplettladung (FTL)', footer_ltl:'Teilladung (LTL)', footer_storage:'Lagerung', footer_customs:'Zollsupport',
+    footer_company:'Unternehmen', footer_about:'Über uns', footer_coverage:'Abdeckung', footer_process:'Wie wir arbeiten', footer_contact:'Kontakt',
+    footer_contact_title:'Kontakt', footer_pl:'Polen, Europa', footer_rights:'Alle Rechte vorbehalten.'
+  },
+  fr: {
+    nav_services:'Services', nav_why:'Pourquoi Nous', nav_coverage:'Couverture', nav_contact:'Contact', nav_process:'Processus',
+    hero_badge:'🇪🇺 Transport dans toute l\'Europe',
+    hero_h1a:'Votre partenaire', hero_h1b:'logistique fiable en Europe',
+    hero_sub:'Park Transport, basé en Pologne, offre des services de transport routier, d\'entreposage et de logistique dans toute l\'Europe.',
+    hero_cta1:'Obtenir un devis', hero_cta2:'Nos services',
+    stat1:'Clients satisfaits', stat2:'Pays européens', stat3:'Ans d\'expérience', stat4:'Livraisons à temps',
+    services_label:'Nos Services', services_h2a:'À vos côtés', services_h2b:'à chaque étape',
+    services_desc:'Nous fournissons des solutions logistiques fiables grâce à notre vaste réseau de la Pologne à chaque coin de l\'Europe.',
+    s1_title:'Transport Routier', s1_desc:'Nous proposons le transport FTL et LTL dans toute l\'Europe avec notre flotte moderne.',
+    s1_f1:'Transport FTL & LTL', s1_f2:'Logistique Chaîne du Froid', s1_f3:'Matières Dangereuses (ADR)', s1_f4:'Suivi GPS en Direct',
+    s2_title:'Entreposage', s2_desc:'Nous stockons vos marchandises en toute sécurité dans nos entrepôts modernes en Pologne.',
+    s2_f1:'Système de Sécurité 24/7', s2_f2:'Entrepôts Climatisés', s2_f3:'Gestion des Stocks (WMS)', s2_f4:'Cross-Docking',
+    s3_title:'Support Transport', s3_desc:'Dédouanement, assurance, gestion documentaire et conseil logistique.',
+    s3_f1:'Conseil Douanier', s3_f2:'Assurance Fret', s3_f3:'Gestion Documents CMR', s3_f4:'Support Client 24/7',
+    learn_more:'En savoir plus →',
+    why_label:'Pourquoi Park Transport', why_h2a:'Confiance, Rapidité et', why_h2b:'Transparence',
+    why_desc:'En tant que partenaire logistique de confiance des entreprises opérant en Europe, nous appliquons les normes les plus élevées.',
+    feat1_title:'Certifié & Agréé', feat1_desc:'Nous détenons toutes les licences conformes aux normes européennes de transport.',
+    feat2_title:'Suivi GPS en Direct', feat2_desc:'Suivez vos marchandises en temps réel, où qu\'elles se trouvent.',
+    feat3_title:'Support Multilingue', feat3_desc:'Notre équipe parle TR, EN, PL, DE et FR — toujours à votre disposition.',
+    feat4_title:'Prix Compétitifs', feat4_desc:'Les prix les plus compétitifs d\'Europe sans compromis sur la qualité.',
+    coverage_label:'Zone de Couverture', cov_h2a:'Nous atteignons', cov_h2b:'toute l\'Europe',
+    cov_desc:'Expéditions régulières vers 30+ pays d\'Europe occidentale à orientale, du nord au sud.',
+    process_label:'Comment nous travaillons', process_h2:'Processus <span>Simple et Transparent</span>', process_desc:'Transport en 4 étapes',
+    step1_title:'Obtenir un devis', step1_desc:'Remplissez le formulaire, appelez ou écrivez sur Telegram. Devis prêt en 1 heure.',
+    step2_title:'Contrat', step2_desc:'Après accord, nous préparons le contrat numérique et les documents CMR.',
+    step3_title:'Chargement & Suivi', step3_desc:'Vos marchandises sont enlevées et un lien GPS en direct vous est envoyé.',
+    step4_title:'Livraison', step4_desc:'Livraison à temps, sans dommage. Signature et facture partagées numériquement.',
+    contact_label:'Contact', contact_h2a:'Obtenez un', contact_h2b:'Devis Maintenant',
+    contact_desc:'Contactez-nous pour le transport vers tout point en Europe. Équipe multilingue disponible 24/7.',
+    phone_label:'Téléphone & WhatsApp', email_label:'E-mail', location_label:'Adresse',
+    form_title:'Demander un Devis Gratuit', form_name:'Nom et Prénom *', form_company:'Société', form_phone:'Téléphone *',
+    form_email:'E-mail', form_service:'Type de Service *', form_select:'Sélectionner...',
+    opt_ftl:'Chargement Complet (FTL)', opt_ltl:'Chargement Partiel (LTL)', opt_storage:'Entreposage', opt_customs:'Douane & Support', opt_other:'Autre',
+    form_from:'Point de Chargement *', form_to:'Point de Livraison *', form_msg:'Informations Complémentaires', form_btn:'Demander un Devis',
+    form_note:'* Votre message est envoyé directement sur Telegram. Réponse dans 1 heure.',
+    success_title:'Message Envoyé !', success_desc:'Notre équipe support vous contactera dans les plus brefs délais.',
+    footer_desc:'Votre partenaire logistique de confiance basé en Pologne, atteignant chaque coin de l\'Europe.',
+    footer_services:'Services', footer_ftl:'Chargement Complet (FTL)', footer_ltl:'Chargement Partiel (LTL)', footer_storage:'Entreposage', footer_customs:'Support Douanier',
+    footer_company:'Entreprise', footer_about:'À Propos', footer_coverage:'Couverture', footer_process:'Comment nous travaillons', footer_contact:'Contact',
+    footer_contact_title:'Contact', footer_pl:'Pologne, Europe', footer_rights:'Tous droits réservés.'
+  },
   pl: {
     nav_services:'Usługi', nav_why:'Dlaczego My', nav_coverage:'Zasięg', nav_contact:'Kontakt', nav_process:'Proces',
     hero_badge:'🇪🇺 Transport do całej Europy',
@@ -808,7 +898,7 @@ function setLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.lang-btn').forEach(b => { if(b.textContent===lang.toUpperCase()) b.classList.add('active'); });
   // Update html title
-  const titles = {tr:'Park Transport | Avrupa Kara Yolu Taşımacılığı', en:'Park Transport | European Road Freight', pl:'Park Transport | Europejski Transport Drogowy'};
+  const titles = {tr:'Park Transport | Avrupa Kara Yolu Taşımacılığı', en:'Park Transport | European Road Freight', pl:'Park Transport | Europejski Transport Drogowy', de:'Park Transport | Europäischer Straßengüterverkehr', fr:'Park Transport | Transport Routier Européen'};
   document.title = titles[lang] || titles.tr;
 }
 
