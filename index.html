@@ -584,12 +584,12 @@ footer{background:var(--dark);padding:60px 5% 30px;border-top:1px solid rgba(255
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label data-i18n="form_from">Yükleme Noktası *</label>
-              <input type="text" name="from" required placeholder="İstanbul, TR">
+              <label data-i18n="form_from">Yükleme Noktası</label>
+              <input type="text" name="from" placeholder="İstanbul, TR">
             </div>
             <div class="form-group">
-              <label data-i18n="form_to">Teslimat Noktası *</label>
-              <input type="text" name="to" required placeholder="Varşova, PL">
+              <label data-i18n="form_to">Teslimat Noktası</label>
+              <input type="text" name="to" placeholder="Varşova, PL">
             </div>
           </div>
           <div class="form-group">
@@ -706,7 +706,7 @@ const T = {
     form_title:'Ücretsiz Teklif İste', form_name:'Ad Soyad *', form_company:'Firma', form_phone:'Telefon *',
     form_email:'E-Posta', form_service:'Hizmet Türü *', form_select:'Seçiniz...',
     opt_ftl:'Tam Yük (FTL)', opt_ltl:'Parsiyel Yük (LTL)', opt_storage:'Depolama', opt_customs:'Gümrük & Destek', opt_other:'Diğer',
-    form_from:'Yükleme Noktası *', form_to:'Teslimat Noktası *', form_msg:'Ek Bilgiler', form_btn:'Teklif İste',
+    form_from:'Yükleme Noktası', form_to:'Teslimat Noktası', form_msg:'Ek Bilgiler', form_btn:'Teklif İste',
     form_note:'* Mesajınız doğrudan Telegram\'a iletilir. 1 saat içinde yanıt alırsınız.',
     success_title:'Mesajınız İletildi!', success_desc:'En kısa sürede destek ekibimiz sizinle iletişime geçecek.',
     footer_desc:'Polonya merkezli, Avrupa\'nın dört bir yanına ulaşan güvenilir lojistik çözüm ortağınız.',
@@ -749,7 +749,7 @@ const T = {
     form_title:'Request a Free Quote', form_name:'Full Name *', form_company:'Company', form_phone:'Phone *',
     form_email:'Email', form_service:'Service Type *', form_select:'Select...',
     opt_ftl:'Full Load (FTL)', opt_ltl:'Partial Load (LTL)', opt_storage:'Warehousing', opt_customs:'Customs & Support', opt_other:'Other',
-    form_from:'Loading Point *', form_to:'Delivery Point *', form_msg:'Additional Info', form_btn:'Request Quote',
+    form_from:'Loading Point', form_to:'Delivery Point', form_msg:'Additional Info', form_btn:'Request Quote',
     form_note:'* Your message is sent directly to Telegram. You\'ll receive a reply within 1 hour.',
     success_title:'Message Sent!', success_desc:'Our support team will get back to you shortly.',
     footer_desc:'Your trusted logistics solution partner based in Poland, reaching every corner of Europe.',
@@ -792,7 +792,7 @@ const T = {
     form_title:'Kostenloses Angebot anfordern', form_name:'Vor- und Nachname *', form_company:'Firma', form_phone:'Telefon *',
     form_email:'E-Mail', form_service:'Leistungsart *', form_select:'Auswählen...',
     opt_ftl:'Komplettladung (FTL)', opt_ltl:'Teilladung (LTL)', opt_storage:'Lagerung', opt_customs:'Zoll & Support', opt_other:'Sonstiges',
-    form_from:'Ladeort *', form_to:'Lieferort *', form_msg:'Zusätzliche Informationen', form_btn:'Angebot anfordern',
+    form_from:'Ladeort', form_to:'Lieferort', form_msg:'Zusätzliche Informationen', form_btn:'Angebot anfordern',
     form_note:'* Ihre Nachricht wird direkt an Telegram gesendet. Antwort innerhalb von 1 Stunde.',
     success_title:'Nachricht gesendet!', success_desc:'Unser Support-Team wird sich in Kürze bei Ihnen melden.',
     footer_desc:'Ihr zuverlässiger Logistikpartner mit Sitz in Polen, der jeden Winkel Europas erreicht.',
@@ -835,7 +835,7 @@ const T = {
     form_title:'Demander un Devis Gratuit', form_name:'Nom et Prénom *', form_company:'Société', form_phone:'Téléphone *',
     form_email:'E-mail', form_service:'Type de Service *', form_select:'Sélectionner...',
     opt_ftl:'Chargement Complet (FTL)', opt_ltl:'Chargement Partiel (LTL)', opt_storage:'Entreposage', opt_customs:'Douane & Support', opt_other:'Autre',
-    form_from:'Point de Chargement *', form_to:'Point de Livraison *', form_msg:'Informations Complémentaires', form_btn:'Demander un Devis',
+    form_from:'Point de Chargement', form_to:'Point de Livraison', form_msg:'Informations Complémentaires', form_btn:'Demander un Devis',
     form_note:'* Votre message est envoyé directement sur Telegram. Réponse dans 1 heure.',
     success_title:'Message Envoyé !', success_desc:'Notre équipe support vous contactera dans les plus brefs délais.',
     footer_desc:'Votre partenaire logistique de confiance basé en Pologne, atteignant chaque coin de l\'Europe.',
@@ -878,7 +878,7 @@ const T = {
     form_title:'Poproś o Bezpłatną Wycenę', form_name:'Imię i Nazwisko *', form_company:'Firma', form_phone:'Telefon *',
     form_email:'E-mail', form_service:'Rodzaj Usługi *', form_select:'Wybierz...',
     opt_ftl:'Pełny Ładunek (FTL)', opt_ltl:'Częściowy Ładunek (LTL)', opt_storage:'Magazynowanie', opt_customs:'Cło & Wsparcie', opt_other:'Inne',
-    form_from:'Punkt Załadunku *', form_to:'Punkt Dostawy *', form_msg:'Dodatkowe Informacje', form_btn:'Zapytaj o Wycenę',
+    form_from:'Punkt Załadunku', form_to:'Punkt Dostawy', form_msg:'Dodatkowe Informacje', form_btn:'Zapytaj o Wycenę',
     form_note:'* Wiadomość jest wysyłana bezpośrednio na Telegram. Odpowiedź w ciągu 1 godziny.',
     success_title:'Wiadomość Wysłana!', success_desc:'Nasz zespół skontaktuje się z Tobą wkrótce.',
     footer_desc:'Twój zaufany partner logistyczny z siedzibą w Polsce, docierający do każdego zakątka Europy.',
