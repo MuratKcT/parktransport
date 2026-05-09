@@ -921,15 +921,16 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
   const fd = new FormData(this);
   const data = Object.fromEntries(fd.entries());
-  const msg = `🚚 *YENİ TAŞİMAT TALEBİ*\n\n👤 *Ad:* ${data.name}\n🏢 *Firma:* ${data.company||'-'}\n📞 *Tel:* ${data.phone}\n📧 *Email:* ${data.email||'-'}\n\n📦 *Hizmet:* ${data.service}\n📍 *Yükleme:* ${data.from}\n🏁 *Teslimat:* ${data.to}\n\n💬 *Not:* ${data.message||'-'}\n\n🌐 *Kaynak:* parktransport.pl`;
+  const msg = `🚚 <b>YENİ TAŞİMAT TALEBİ</b>\n\n👤 <b>Ad:</b> ${data.name}\n🏢 <b>Firma:</b> ${data.company||'-'}\n📞 <b>Tel:</b> ${data.phone}\n📧 <b>Email:</b> ${data.email||'-'}\n\n📦 <b>Hizmet:</b> ${data.service}\n📍 <b>Yükleme:</b> ${data.from||'-'}\n🏁 <b>Teslimat:</b> ${data.to||'-'}\n\n💬 <b>Not:</b> ${data.message||'-'}\n\n🌐 <b>Kaynak:</b> parktransport.pl`;
 
   try {
     if (TELEGRAM_BOT_TOKEN !== 'YOUR_BOT_TOKEN_HERE') {
-      await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({chat_id: TELEGRAM_CHAT_ID, text: msg, parse_mode: 'Markdown'})
+        body: JSON.stringify({chat_id: TELEGRAM_CHAT_ID, text: msg, parse_mode: 'HTML'})
       });
+      if (!res.ok) throw new Error('Telegram error: ' + res.status);
     }
     document.getElementById('formWrap').style.display = 'none';
     document.getElementById('formSuccess').style.display = 'block';
