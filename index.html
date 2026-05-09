@@ -930,7 +930,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({chat_id: TELEGRAM_CHAT_ID, text: msg, parse_mode: 'HTML'})
       });
-      if (!res.ok) throw new Error('Telegram error: ' + res.status);
+      const json = await res.json();
+      console.log('Telegram response:', JSON.stringify(json));
+      if (!res.ok) throw new Error('Telegram error: ' + JSON.stringify(json));
     }
     document.getElementById('formWrap').style.display = 'none';
     document.getElementById('formSuccess').style.display = 'block';
